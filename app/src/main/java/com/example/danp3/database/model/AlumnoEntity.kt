@@ -8,8 +8,12 @@ import androidx.room.PrimaryKey
 class AlumnoEntity (
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "AluId")
-    val AluId: Int? = null,
+    val AluId: Int = 0,
 
     @ColumnInfo(name = "AluNam")
     val AluNam: String,
-    )
+
+    @ColumnInfo(name = "AluApe")
+    val AluApe: String,
+
+)

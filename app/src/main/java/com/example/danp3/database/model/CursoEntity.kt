@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 class CursoEntity (
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "CurId")
-    val CurId: Int? = null,
+    val CurId: Int = 0,
 
     @ColumnInfo(name = "CurNam")
     val CurNam: String,

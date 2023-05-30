@@ -207,12 +207,12 @@ fun InsertarDatos(mCursoViewModel: CursoViewModel, mAlumnoViewModel: AlumnoViewM
         mAlumnoViewModel.insertAlumno(alumnoEntity)
     }
 
-    val tamañoCursos = cursos.size
-    val tamañoAlumnos = alumnos.size
+    val tamañoCursos = cursos.size + 1
+    val tamañoAlumnos = alumnos.size + 1
     val random = Random(System.currentTimeMillis())
 
     for (i in 1 .. tamañoAlumnos) {
-        for (j in 1 .. 5) {
+        for (j in 1 .. 3) {
             val indiceAleatorio = random.nextInt(tamañoCursos)
             val cursoAlumnoCrossRef = CursoAlumnoCrossRef(CurId = indiceAleatorio, AluId = i)
             mCursoViewModel.insertCursoAlumnoCrossRef(cursoAlumnoCrossRef)
